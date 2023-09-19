@@ -14,13 +14,13 @@ def nombre_jour(mois,annee):
     long_mois = [1,3,5,7,8,10,12]
     court_mois = [4,6,9,11]
     if mois == 2 :
-        if bissextile(annee) == True :
+        if bissextile(annee) :
             return 29
         else :
             return 28
     elif mois in long_mois:
         return 31
-    if mois in cour_tmois:
+    if mois in court_mois:
         return 30
     
 def date(jour,mois,annee):

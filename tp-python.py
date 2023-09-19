@@ -10,17 +10,17 @@ def bissextile(annee):
         return False
 
 
-def nombrejour(mois,annee):
-    longmois = [1,3,5,7,8,10,12]
-    courtmois = [4,6,9,11]
+def nombre_jour(mois,annee):
+    long_mois = [1,3,5,7,8,10,12]
+    court_mois = [4,6,9,11]
     if mois == 2 :
         if bissextile(annee) == True :
             return 29
         else :
             return 28
-    elif mois in longmois:
+    elif mois in long_mois:
         return 31
-    if mois in courtmois:
+    if mois in cour_tmois:
         return 30
     
 def date(jour,mois,annee):
@@ -34,10 +34,8 @@ def date(jour,mois,annee):
     
 
 
-print (bissextile(400))
-print (bissextile(2024))
-print (bissextile(401))
-print (nombrejour(2,2024))
-print (nombrejour(2,2021))
-print (nombrejour(12,2024))
-print (nombrejour(4,2024))
+print (date(29,2,2024))
+print (date(29,2,2021))
+print (date(28,2,2021))
+print (date(24,12,2023))
+print (date(55,2,2024))
